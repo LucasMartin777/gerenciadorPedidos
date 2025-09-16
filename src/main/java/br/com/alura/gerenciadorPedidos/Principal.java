@@ -1,13 +1,16 @@
 package br.com.alura.gerenciadorPedidos;
 
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GerenciadorPedidosApplication {
+public class Principal {
 
-	public static void main(String[] args) {
-		SpringApplication.run(GerenciadorPedidosApplication.class, args);
-	}
+
+    public static void main(String[] args) {
+        SpringApplication.run(Principal.class, args);
+    }
+
 
 }
