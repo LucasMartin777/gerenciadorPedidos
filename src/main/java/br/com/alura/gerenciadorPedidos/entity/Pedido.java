@@ -1,6 +1,8 @@
 package br.com.alura.gerenciadorPedidos.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import java.time.LocalDate;
@@ -8,10 +10,11 @@ import java.time.LocalDate;
 @Entity
 public class Pedido {
     @Id
-    Long id;
-    LocalDate data;
+    private Long id;
+    private LocalDate data;
 
-    public Pedido(LocalDate data) {
+    public Pedido(Long id, LocalDate data) {
+        this.id = id;
         this.data = data;
     }
 

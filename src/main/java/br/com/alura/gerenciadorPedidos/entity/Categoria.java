@@ -1,15 +1,20 @@
 package br.com.alura.gerenciadorPedidos.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class Categoria {
     @Id
-    Long id;
-    String nome;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    public Categoria(String nome) {
+    private String nome;
+
+    public Categoria(Long id, String nome) {
+        this.id = id;
         this.nome = nome;
     }
 
